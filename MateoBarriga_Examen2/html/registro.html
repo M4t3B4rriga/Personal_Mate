@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Divs</title>
+    <link rel="stylesheet" href="../css/formulario.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header-left">Mateo Barriga</div>
+        <div class="header-right">9748</div>
+    </div>
+    <div class="menu">
+        <div class="dropdown">
+            <button class="dropbtn">Opciones</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="mostrarFormulario()">Registro</a>
+                <a href="#" onclick="mostrarRegistros()">Reportes</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="formulario" id="formularioRegistro" style="display: none;">
+            <h2>Formulario de Registro</h2>
+            <form>
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" required>
+                <br>
+
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" required>
+                <br>
+
+                <label for="fecha">Fecha de Ingreso:</label>
+                <input type="date" id="fecha" required>
+                <br>
+
+                <label for="unidades">Unidades medida:</label>
+                <select id="unidades">
+                    <option value="Unidades">Unidades</option>
+                    <option value="Libras">Libras</option>
+                    <option value="Kilos">Kilos</option>
+                    <option value="Litros">Litros</option>
+                    <option value="Cajas">Cajas</option>
+                </select>
+                <br>
+
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" required>
+                <br>
+
+                <label for="precio">Precio Unitario:</label>
+                <input type="number" step="0.01" id="precio" required>
+                <br>
+
+                <button type="button" onclick="agregarRegistro()">Agregar</button>
+            </form>
+        </div>
+        <div class="tabla" id="tablaRegistro" style="display: none;">
+            <!-- Aquí se mostrará la tabla con los registros ingresados -->
+            <table>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Fecha de Ingreso</th>
+                    <th>Unidades medida</th>
+                    <th>Stock</th>
+                    <th>Precio Unitario</th>
+                </tr>
+            </table>
+        </div>
+    </div>  
+
+    <script src="../js/registro.js" ></script>
+    
+</body>
+</html>
+

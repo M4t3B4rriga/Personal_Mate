@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: orange; /* Color de fondo naranja */
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    background-color: rgba(206, 156, 64, 0.699); /* Fondo transparente */
+    border: 2px solid #fff; /* Bordes blancos */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el recuadro vertical "Formulario" */
+.form-label {
+    position: absolute;
+    top: 50%;
+    margin: 3;
+    right: -80px;
+    transform: translate(0, -50%);
+    background-color: rgba(206, 156, 64, 0.699);
+    border: 2px solid #fff; /* Bordes blancos */
+    color: #fff;
+    font-size: 20px;
+    padding: 40px 5px;
+    border-radius: 5px;
+    writing-mode: vertical-lr;
+    writing-mode: {direccion === 'rl' ? 'vertical-rl' : 'vertical-lr'};
+        text-orientation: upright;
+        white-space: nowrap;
+}
