@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MATEO BARRIGA</title>
+
+<style>
+p{
+	color=#892173
+	}
+	#nom{color:#369; }
+</style>
+</head>
+	<body bgcolor="#6D9379">
+	<h1 align="center"> FORMULARIO PERSONAL</h1>
+	<form id="form1" name="form1" method="post" action="php/envio.php">
+	<fieldset style="width: 30%; margin: auto">
+		<legend> Formulario de MATEO BARRIGA</legend>
+		<p>
+			<label for="nom">Nombre: </label><br>
+			<input type="text" id="nombr" name="nom" autofocus placeholder="Ingresar nombres" required pattern="[A-Z][a-z]+\s[A-Z][a-z]+"
+		</p>
+		<p>
+   <label for="ape">Apellido:</label><br>
+  <input type="text" id="apell" name="ape" placeholder="Ingresar apellidos" required pattern="[A-Z][a-z]+\s[A-Z][a-z]+">
+   </p>
+		<p>
+   <label for="correo">Correo:</label><br>
+  <input type="email" id="email" name="correo"  required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+   </p>
+	 <p>
+   <label for="url">URL:</label><br>
+  <input type="url" id="Url" name="url" required pattern="^(http|https):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-@?^=%&/~\+#])?$" >
+   </p>
+		<p>
+			<label for="fecha">Fecha de nacimiento: </label>
+		<br>
+			<input type="date" id="fecha" name="Fecha" max="2017-01-01" min="2000-01-01" >	
+		</p>
+		
+	<p><label for="fechaHora">
+		Fecha y hora actual: </label><br>
+		<input type="datetime-local" id="fechaHora" name="actual">
+		</p>
+		<p><label for="Sueldo">Sueldo: </label><br>
+			<input type="number" id="suel" name="sueldo" step="0.01" max="5000" min="0" >
+		<p>
+		<label for="telefono">Telefono: </label><br>
+			<input type="tel" id="telefono" name="tel" required pattern="[0-9]{9}+" min="10">
+		</p>
+		<p>
+		<label for="color"> Color: </label><br>
+			<input type="color" id="col" name="color">
+		</p>
+		
+		
+	
+		
+		
+	  </fieldset>
+	<fieldset style="width: 30%; margin: auto">
+  <input name="Enviar" type="submit">
+  <input name="Restablecer" type="reset">
+  </fieldset>
+	
+	
+	
+	</form>
+
+
+</body>
+</html>
